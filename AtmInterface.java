@@ -7,7 +7,7 @@ class Account {
     String password;
     String TransactionHistory = "";
     int transaction = 0;
-    float Balance = 10000000;
+    float Balance = 1000000f;
 
 
     public void registration() {
@@ -60,7 +60,8 @@ class Account {
                 transaction++;
                 Balance += amount;
                 System.out.println("WithDraw Successfully!!!!");
-                String str = amount + "Rs WithDrawn by You\n";
+                String str = amount + " Rs WithDrawn by You\n";
+                System.out.println("\n");
                 TransactionHistory = TransactionHistory.concat(str);
             } else {
                 System.out.println("Insufficient Balance for Withdrawnment\n");
@@ -75,7 +76,7 @@ class Account {
         System.out.println("Enter the Amount you wan to Deposit: \n");
         float Amount = sc.nextFloat();
         try {
-            if(Amount <= 100000000f) {
+            if(Amount <= 1000000f) {
                 transaction++;
                 Balance += Amount;
                 System.out.println("Your Amount is Successfully Deposited\n");
@@ -101,6 +102,7 @@ class Account {
                     transaction++;
                     Balance -= Amount;
                     System.out.println("Amount is Successfully Transferred to " + receipent + " Account");
+                    System.out.println("\n");
                     String str = Amount + " Rs Transferred to " + receipent + "\n";
                     TransactionHistory = TransactionHistory.concat(str);
                 } else {
