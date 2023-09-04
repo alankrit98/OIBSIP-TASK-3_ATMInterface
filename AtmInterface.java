@@ -130,7 +130,7 @@ class Account {
     }
 }
 public class AtmInterface {
-    public static int takeIntegerInput(int limit) {
+    public static int Input(int limit) {
         int input = 0;
         boolean key = false;
         while(!key) {
@@ -154,7 +154,7 @@ public class AtmInterface {
         System.out.println("1.Register");
         System.out.println("2.Exit");
         System.out.println("Please Enter your Choice: \n");
-        int choiceuser = takeIntegerInput(2);
+        int choiceuser = Input(2);
         if(choiceuser == 1) {
             Account user = new Account();
             user.registration();
@@ -162,7 +162,7 @@ public class AtmInterface {
                 System.out.println("Please Enter your Choice: \n");
                 System.out.println("1.Login");
                 System.out.println("2.Exit");
-                int ch = takeIntegerInput(2);
+                int ch = Input(2);
                 if(ch == 1) {
                     if(user.login()) {
                         System.out.println("\nWelcome!!!\n");
@@ -176,7 +176,7 @@ public class AtmInterface {
                             System.out.println("5.Check Bank Balance");
                             System.out.println("6.Exit");
                             System.out.println("\nPlease Enter your Choice: \n");
-                            int c = takeIntegerInput(6);
+                            int c = Input(6);
                             switch(c) {
                                 case 1:
                                 user.TransHistory();
